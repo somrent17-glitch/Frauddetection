@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-01-30T13:24:21+00:00",
+  "seed": 7,
+  "observation_start": "2025-08-03",
+  "observation_end": "2026-01-30",
+  "config": {
+    "days": 180,
+    "n_users": 3200,
+    "n_products": 260,
+    "n_coupons": 14,
+    "avg_sessions_per_day": 520,
+    "max_sessions_per_day": 900,
+    "base_conversion_rate": 0.045
+  },
+  "rows": {
+    "users": 3200,
+    "sessions": 104683,
+    "orders": 4637,
+    "order_items": 11533,
+    "payments": 6200,
+    "shipments": 4558,
+    "refunds": 531,
+    "coupons": 15,
+    "products": 260
+  },
+  "known_data_issues_intentionally_included": [
+    "users: ~0.8% missing home_pincode; fraud rings share device_id + pincode",
+    "sessions: ~0.7% missing device; ~1% inconsistent casing in channel; ~0.25% duplicated rows",
+    "orders: ~1% missing coupon_id; ~0.25% duplicated rows; rare net_amount outliers",
+    "order_items: ~0.2% duplicated rows; rare bulk-qty anomalies",
+    "payments: ~1% inconsistent casing in payment_status; ~0.3% duplicated rows; CANCELLED_PAYMENT_FAILED orders exist",
+    "shipments: ~1% inconsistent casing in shipment_status; ~0.2% duplicated rows; COD RTO clusters exist",
+    "refunds: ~0.7% missing refund_reason; ~1% inconsistent casing in refund_status; ~0.25% duplicated rows"
+  ],
+  "notes": [
+    "Fraud/anomaly patterns are embedded via latent user risk profiles: coupon_abuser, card_tester, rto_prone, high_refunder.",
+    "Device_id and pincode reuse clusters are embedded to enable investigation features.",
+    "Stock-like censoring isn't used here; anomalies are behavioral + transactional."
+  ]
+}

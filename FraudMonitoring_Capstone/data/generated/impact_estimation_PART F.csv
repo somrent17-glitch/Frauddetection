@@ -1,0 +1,12 @@
+metric,value_inr,category
+Current Monthly Loss (Refund),300157,Current Loss
+Current Monthly Loss (RTO),51692,Current Loss
+Total Current Monthly Loss,351849,Current Loss
+Flagged Loss Pool (30d),17395,Flagged Pool
+Loss Prevented — WORST (20%),3479,Savings Scenario
+Loss Prevented — BASE (45%),7828,Savings Scenario
+Loss Prevented — BEST (70%),12176,Savings Scenario
+OpEx Cost (30d reviews),1225,Operational Cost
+Net Saving — WORST,2254,Net Impact
+Net Saving — BASE,6603,Net Impact
+Net Saving — BEST,10951,Net Impact
